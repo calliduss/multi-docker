@@ -1,0 +1,23 @@
+language: generic
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t callius/react-test -f ./client/Dockerfile.dev ./client
+
+script:
+  - docker run -e CI=true calliduss/react-test npm test
+
+after_success:
+  - docker build -t calliduss/multi-client ./client
+  - docker build -t calliduss/multi-nginx ./nginx
+  - docker build -t calliduss/multi-server ./server
+  - docker build -t calliduss/multi-worker ./worker
+  # Log in to the Docker CLI
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  # Take those images in build step and push them to docker hub
+  - docker push calliduss/multi-client
+  - docker push calliduss/multi-nginx
+  - docker push calliduss/multi-server
+  - docker push calliduss/multi-worker
