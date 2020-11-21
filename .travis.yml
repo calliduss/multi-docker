@@ -4,7 +4,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t calliuss/react-test -f ./client/Dockerfile.dev ./client
+  - docker build -t calliduss/react-test -f ./client/Dockerfile.dev ./client
 
 script:
   - docker run -e CI=true calliduss/react-test npm test
