@@ -21,3 +21,16 @@ after_success:
   - docker push calliduss/multi-nginx
   - docker push calliduss/multi-server
   - docker push calliduss/multi-worker
+
+deploy:
+  provider: 'elacticbeanstalk'
+  region: 'us-east-2'
+  app: 'multi-docker'
+  env: 'MultiDocker-env'
+  bucket_name: 'elasticbeanstalk-us-east-2-387611224644'
+  bucket_path: 'docker-multi'
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: $AWS_SECRET_KEY
