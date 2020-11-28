@@ -20,7 +20,10 @@ function App() {
             Learn React 3
           </a>
           <Link to="/">Home</Link>
-          <Link to="/otherpage">Other Page</Link>
+          <Link to="/otherpage"
+          href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=PLahKLy8pQdCM0SiXNn3EfGIXX19QGzUG3">
+            Other Page
+          </Link>
         </header>
         <div>
           <Route exact path="/" component={Fib} />
