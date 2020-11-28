@@ -23,7 +23,7 @@ after_success:
   - docker push calliduss/multi-worker
 
 deploy:
-  provider: 'elasticbeanstalk'
+  provider: elasticbeanstalk
   region: 'us-east-2'
   app: 'multi-docker'
   env: 'MultiDocker-env'
