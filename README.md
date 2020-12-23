@@ -10,7 +10,7 @@ Below is overall architecture of the web application:
 
 Project structure (only deployment side): 
 
-
+```
  .travis.yml 
  docker-compose.yml  
  Dockerrun.aws.json 
@@ -33,7 +33,7 @@ Project structure (only deployment side):
 └───worker 
        Dockerfile 
        Dockerfile.dev 
-
+```
 
 
 The picture below shows CI/CD process:
