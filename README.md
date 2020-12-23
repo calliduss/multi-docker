@@ -10,6 +10,7 @@ Below is overall architecture of the web application:
 
 Project structure (only deployment side): 
 
+
  .travis.yml
  docker-compose.yml 
  Dockerrun.aws.json
