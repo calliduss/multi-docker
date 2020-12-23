@@ -87,9 +87,9 @@ Travis CI is a hosted continuous integration service used to build and test soft
 Travis CI is integrated with Github but it's necessary to sync (or resync) with your Github account
 `.travis.yml` file tells Travis CI what to do
 
--> `before_install` step builds test version of React project 
--> `script` uses an image that was created in before_install step and run tests against it 
--> `after_success` step builds production version of all projects and pushes them to Docker hub 
+- `before_install` step builds test version of React project 
+- `script` uses an image that was created in before_install step and run tests against it 
+- `after_success` step builds production version of all projects and pushes them to Docker hub 
 
 Its necessary to specify environment variables Travis CI that are used in `.travis.yml`
 https://travis-ci.org/github/calliduss/multi-docker/settings
