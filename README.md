@@ -11,28 +11,28 @@ Below is overall architecture of the web application:
 Project structure (only deployment side): 
 
 
- .travis.yml
- docker-compose.yml 
- Dockerrun.aws.json
-├───client
-│   │   Dockerfile
-│   │   Dockerfile.dev
+ .travis.yml 
+ docker-compose.yml  
+ Dockerrun.aws.json 
+├───client 
+│   │   Dockerfile 
+│   │   Dockerfile.dev 
 │   │
-│   └───nginx
-│          default.conf
+│   └───nginx 
+│          default.conf 
 │
-├───nginx
-│       default.conf
-│       Dockerfile
-│       Dockerfile.dev
+├───nginx 
+│       default.conf 
+│       Dockerfile 
+│       Dockerfile.dev 
 │
-├───server
-│      Dockerfile
-│      Dockerfile.dev
+├───server 
+│      Dockerfile 
+│      Dockerfile.dev 
 │
-└───worker
-       Dockerfile
-       Dockerfile.dev
+└───worker 
+       Dockerfile 
+       Dockerfile.dev 
 
 
 
